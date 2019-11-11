@@ -1,0 +1,84 @@
+<html>
+
+    <head>
+    
+            <title> Birth Year Finder </title>
+        
+            <style type="text/css">
+        
+                .alignment{
+                    
+                    text-align: center;
+                    position: relative; 
+                    top: 100px;
+                    font-family: fantasy;
+                  
+                }
+        
+                body{
+                    
+                    background-color: aqua;
+                    background-image: url('BOXES.jpg');
+                }
+        
+        
+        
+        
+            </style>
+
+    
+    </head>
+    
+    <body>
+        
+       
+        
+       <h2> <p class = "alignment"> Enter your Age ! </p> </h2>
+    
+        <p class ="alignment" id="ageInput"> <input style="width: 400px; height: 50px" type="number" placeholder ="your age" id="age" > </p>
+        
+        <p class =" alignment" > <button id="mybutton"> Click Here </button></p>
+        
+        <h2><p class = "alignment"> Your Year of Birth is : <span id="yearofbirth">  </span> </p></h2>
+        
+        
+        <script type="text/javascript">
+          
+           
+            
+            function calculateYear(){
+                
+                var birthDate = document.getElementById("age").value;
+                
+                if(birthDate == "" || birthDate == "0"){
+                
+                    alert('Please Enter a Valid Age');
+                    return;
+                    
+                }
+                
+                var date = new Date().getFullYear();
+                
+                var year = date - birthDate;
+                
+                
+              
+                
+                document.getElementById("yearofbirth").innerHTML = year;
+        
+            }
+            
+            
+            document.getElementById("mybutton").onclick = function(){
+                calculateYear();
+            }
+            
+        </script>
+    
+    
+    
+    
+    </body>
+
+
+</html>
